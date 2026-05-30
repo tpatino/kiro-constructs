@@ -11,6 +11,7 @@ Choose the type of artifact you want to add:
 - **Agent** - An autonomous AI assistant with specific tools and expertise
 - **Hook** - An event-driven automation triggered by development events
 - **Power** - A bundled capability with documentation, steering, and optional MCP config
+- **Skill** - A reusable capability definition with prompts, tools, and composable workflow steps
 - **Steering example** - A template for project rules and conventions
 - **Spec example** - A structured requirements document demonstrating the spec format
 
@@ -21,6 +22,7 @@ Before creating a new artifact, review the existing catalog in the relevant cate
 - [agents/README.md](agents/README.md)
 - [hooks/README.md](hooks/README.md)
 - [powers/README.md](powers/README.md)
+- [skills/README.md](skills/README.md)
 - [steering/README.md](steering/README.md)
 - [specs/README.md](specs/README.md)
 
@@ -42,6 +44,7 @@ Before submitting, test your artifact in an actual Kiro project:
 - Agents should produce useful, well-structured output when invoked
 - Hooks should trigger correctly and behave idempotently
 - Powers should install cleanly and provide documented capabilities
+- Skills should produce consistent results in isolation and when composed into agents
 - Steering files should measurably influence Kiro behavior
 - Specs should be implementable by Kiro without ambiguity
 
@@ -76,6 +79,7 @@ Before submitting, verify your artifact meets these standards:
 | Agent files | `{agent-name}.md` | `solution-reviewer.md` |
 | Hook files | `{hook-name}.md` | `format-on-save.md` |
 | Power directories | `{power-name}/` | `api-design/` |
+| Skill files | `{skill-name}.md` | `parse-openapi-spec.md` |
 | Steering files | `{topic}.md` | `coding-standards.md` |
 | Spec files | `{feature-name}.md` | `user-authentication.md` |
 | Branch names | `{action}-{artifact-name}` | `add-typescript-linting-hook` |
@@ -109,6 +113,15 @@ All names should be:
 - `POWER.md` with overview, installation, usage, configuration, examples
 - At least one steering file
 - Dependency documentation
+
+### Skills
+
+- YAML frontmatter: `name`, `description`, `tools`
+- Capability statement
+- Input and output definitions
+- Ordered workflow steps
+- Error handling instructions
+- Composition notes
 
 ### Steering Examples
 

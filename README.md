@@ -4,7 +4,7 @@
 
 ## Purpose
 
-**kiro-constructs** is a community-driven repository of high-quality Kiro artifacts -- agents, hooks, powers, steering files, and specs -- designed to accelerate your development workflow. Each artifact is crafted to meet elite maturity standards: comprehensive documentation, clear scope, practical examples, and validated effectiveness in real projects.
+**kiro-constructs** is a community-driven repository of high-quality Kiro artifacts -- agents, hooks, powers, skills, steering files, and specs -- designed to accelerate your development workflow. Each artifact is crafted to meet elite maturity standards: comprehensive documentation, clear scope, practical examples, and validated effectiveness in real projects.
 
 Whether you are setting up a new project or enhancing an existing workflow, this repository provides ready-to-use building blocks that you can copy directly into your `.kiro/` directory.
 
@@ -23,6 +23,8 @@ kiro-constructs/
 ├── hooks/                   # Hook artifacts (catalog & docs)
 │   └── README.md
 ├── powers/                  # Power artifacts (catalog & docs)
+│   └── README.md
+├── skills/                  # Skill artifacts (catalog & docs)
 │   └── README.md
 ├── steering/                # Steering file examples (catalog & docs)
 │   └── README.md
@@ -53,6 +55,12 @@ Powers are packaged capabilities that bundle documentation, steering files, and 
 
 **When to use:** When you need to add a complete capability (documentation + workflow + tools) to your project in one step.
 
+### [Skills](skills/README.md)
+
+Skills are reusable capability definitions that package prompts, tool configurations, and workflow steps into composable units. They allow agents to gain specific capabilities without duplicating instructions.
+
+**When to use:** When you want to define a reusable capability that can be composed into multiple agents or invoked independently for a specific task.
+
 ### [Steering](steering/README.md)
 
 Steering files define project rules, conventions, and guidelines that Kiro follows when working in your project. They establish consistent behavior across all AI-assisted development.
@@ -74,6 +82,7 @@ Specs are structured requirement documents with requirements, design, and task s
    - Agents go in `.kiro/agents/`
    - Hooks go in `.kiro/hooks/`
    - Powers go in `.kiro/powers/`
+   - Skills go in `.kiro/skills/`
    - Steering files go in `.kiro/steering/`
    - Specs go in `.kiro/specs/`
 3. **Customize** the artifact to fit your project's specific needs (adjust tools, patterns, or rules as appropriate).
@@ -92,7 +101,7 @@ cp kiro-constructs/.kiro/agents/solution-reviewer.md your-project/.kiro/agents/
 
 This repository targets the **elite maturity level** for Kiro adoption:
 
-- **Complete artifact coverage** -- agents, hooks, steering, and specs working together
+- **Complete artifact coverage** -- agents, hooks, skills, steering, and specs working together
 - **Comprehensive documentation** -- every artifact is thoroughly documented with usage examples
 - **Proven patterns** -- artifacts are validated in real projects before inclusion
 - **Consistent quality** -- all artifacts meet the same high standards for structure, clarity, and effectiveness

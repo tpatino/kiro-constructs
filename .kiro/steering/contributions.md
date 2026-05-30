@@ -2,7 +2,7 @@
 
 ## Workflow for Adding New Artifacts
 
-1. **Identify the need** - Determine which category the artifact belongs to (agent, hook, power, steering, spec)
+1. **Identify the need** - Determine which category the artifact belongs to (agent, hook, power, skill, steering, spec)
 2. **Check for duplicates** - Review existing artifacts to avoid overlap
 3. **Create the artifact** - Follow the format standards for the category
 4. **Document thoroughly** - Include all required sections per the category standards
@@ -36,6 +36,15 @@
 - At least one steering file providing workflow guidance
 - Clear documentation of any MCP server requirements
 - Dependencies and prerequisites listed
+
+### Skills
+
+- YAML frontmatter with `name`, `description`, and `tools`
+- Capability statement (what the skill enables)
+- Input and output definitions for composability
+- Ordered workflow steps
+- Error handling instructions
+- Composition notes (how the skill interacts with agents or other skills)
 
 ### Steering Files
 
@@ -78,6 +87,7 @@ Reviewers should evaluate:
 - Agents should be invoked in a Kiro session and produce useful output
 - Hooks should trigger correctly on their specified events
 - Powers should install cleanly and provide their documented capabilities
+- Skills should produce consistent results in isolation and when composed into agents
 - Steering files should measurably influence Kiro behavior when active
 - Specs should be implementable by Kiro without ambiguity
 
@@ -93,5 +103,6 @@ Reviewers should evaluate:
 - If an artifact defines an autonomous AI assistant with specific tools and model: it is an **agent**
 - If an artifact triggers on a development event (save, create, commit): it is a **hook**
 - If an artifact bundles documentation, steering, and optional MCP config: it is a **power**
+- If an artifact defines a reusable capability with inputs, outputs, and composable workflow steps: it is a **skill**
 - If an artifact defines project rules and conventions for Kiro to follow: it is a **steering file**
 - If an artifact defines requirements, design, and tasks for implementation: it is a **spec**

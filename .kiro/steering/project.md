@@ -2,7 +2,7 @@
 
 ## Repository Purpose
 
-This repository is a curated collection of AWS Kiro artifacts. It serves as a reference library and distribution point for production-ready agents, hooks, powers, steering files, and specs.
+This repository is a curated collection of AWS Kiro artifacts. It serves as a reference library and distribution point for production-ready agents, hooks, powers, skills, steering files, and specs.
 
 ## Directory Structure Rules
 
@@ -11,6 +11,7 @@ This repository is a curated collection of AWS Kiro artifacts. It serves as a re
 - **`agents/`** - Agent artifacts available for others to use (catalog and documentation)
 - **`hooks/`** - Hook artifacts available for others to use
 - **`powers/`** - Power artifacts available for others to use
+- **`skills/`** - Skill artifacts available for others to use
 - **`steering/`** - Steering file examples and templates
 - **`specs/`** - Spec examples and templates
 - Each top-level category directory must contain a `README.md` explaining the category
@@ -22,6 +23,7 @@ This repository is a curated collection of AWS Kiro artifacts. It serves as a re
 - Agent files: `{agent-name}.md`
 - Hook files: `{hook-name}.md`
 - Power directories: `{power-name}/` containing `POWER.md`
+- Skill files: `{skill-name}.md`
 - Steering files: descriptive kebab-case names (e.g., `coding-standards.md`, `api-conventions.md`)
 - Spec files: `{spec-name}.md`
 
